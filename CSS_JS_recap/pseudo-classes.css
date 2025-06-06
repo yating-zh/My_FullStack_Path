@@ -1,0 +1,40 @@
+#box1{
+    border: solid 1px;
+    height:300px;
+    width:300px;
+    background-color: skyblue;
+    position:relative
+}
+#box2{
+    border: solid 1px;
+    height:100px;
+    width:100px;
+    background-color: tomato;
+}
+button:hover{
+    background-color: grey;
+}
+button:active{
+    background-color: white;
+}
+a:link{
+    color: chartreuse;
+}
+a:hover{
+    color:red;
+}
+a:active{
+    color:yellow;
+}
+a:visited{
+    color: lightpink;
+}
+/*li:nth-child(1){
+    background-color: yellow;
+}
+li:nth-child(even){
+    background-color: yellow;
+}*/
+li:nth-child(3n){
+    background-color: yellow;
+}

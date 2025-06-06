@@ -1,0 +1,63 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    text-align: center;
+}
+.item{
+      background-color:sandybrown;
+      outline: solid 1px skyblue;
+      font-size: 50px;
+}
+.item.header{
+    background-color:lightseagreen;
+}
+.item.main{
+    background-color: lightgray;
+}
+.item.sidebar{
+    background-color: lightgreen;
+}
+.item.footer{
+    background-color:grey;
+}
+h1 span{
+    font-size:medium;
+}
+#container{
+    width: 95vw;
+    height: 60vh;
+    outline:slateblue solid 5px;
+    background-color: whitesmoke;
+    margin: 0 auto;
+
+    display: grid ;
+    /*grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60px auto 100px;
+    grid-template-areas: 
+    'header header header'
+    'main main sidebar'
+    'footer footer footer';*/
+    grid-template: 
+    /* rows: */
+    'header header header' 60px
+    'main main sidebar' auto
+    'footer footer footer' 100px
+    /* columns:  */
+    /1fr 1fr 1fr;
+
+}
+/*.seven{
+    grid-column:2/3;
+}*/
+.header{
+    grid-area: header;
+}
+.main{
+    grid-area: main;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.footer{
+    grid-area: footer;
+}

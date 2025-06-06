@@ -1,0 +1,52 @@
+.box2{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    font-size: 200px;
+    text-align: center;
+
+    animation: mySlide;
+
+    /*animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-play-state:running;
+    animation: mySlide;*/
+
+    animation: 3s linear 0s infinite running myColor;
+    /* duration, timing-function, delay, iteration-count, play-state, animation*/
+}
+.box2:hovor{
+    /*animation: 3s linear 0s infinite running mySlide;*/
+}
+.box2:active{
+    /*animation: 3s linear 0s infinite running mySlide;*/
+}
+@keyframes mySlide{
+    from{margin-left: 100%;}
+    to{margin-left: 0%;}
+    /* from-to equals to 10%-100%; the precentage means the animation process(0% - at the begining; 100% - at the end) */
+}
+@keyframes myRotate{
+    100%{
+        /*transform: rotateX(360deg)*/
+        /*transform: rotateY(360deg)*/
+        transform: rotateZ(360deg)
+    }
+}
+@keyframes myOpacity{
+    50%{opacity: 0;}
+}
+@keyframes myScale{
+    50%{transform: scale(0.5,0.5);}
+}
+@keyframes myColor{
+    0%{background-color:red}
+    20%{background-color:orange}
+    40%{background-color:yellow}
+    60%{background-color:green}
+    80%{background-color:blue}
+   100%{background-color:purple}
+
+}

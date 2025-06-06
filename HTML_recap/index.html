@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="action_page.php" method="POST">
+        <div>
+            <!-- using for to match the input’s id is good practice and should be followed. -->
+            <label for="fname">first name:</label>
+            <input id="fname" type="text" name="fname" placeholder="Spongebob" required />
+        </div>
+        <br />
+
+        <div>
+            <label for="lname">last name:</label>
+            <input id="lname" type="text" name="lname" placeholder="Squarepants" required />
+        </div>
+        <br />
+        <div>
+            <label for="pass">password:</label>
+            <input id="pass" type="password" name="pass" maxlength="12" required />
+        </div>
+        <br />
+        <div>
+            <label for="email">email:</label>
+            <input id="email" type="email" name="email" placeholder="example@gmail.com" required />
+        </div>
+        <br />
+        <div>
+        <label for="phone">phone:</label>
+        <input id="phone" type="tel" name="phone" placeholder="(+61) 123456789" required />
+        </div>
+        <br />
+        <div>
+            <label for="bdate">birthday:</label>
+            <input id="bdate" type="date" name="bdate" required />
+        </div>
+        <br />
+
+        <div>
+            <label for="quantity">quantity:</label>
+            <input id="quantity" type="number" name="quantity" min="0" max="99" value="1"/>
+        </div>
+        <br />
+
+        <div>
+            <label for="title">title:</label>
+
+            <label for="Mr.">Mr.</label>
+            <input type="radio" name="title" value="Mr." id="Mr.">
+            <label for="Mrs.">Mrs.</label>
+            <input type="radio" name="title" value="Mrs." id="Mrs.">
+            <label for="PhD.">PhD.</label>
+            <input type="radio" name="title" value="PhD." id="PhD.">
+        </div>
+        <br>
+        <div>
+            <label for="payment">payment:</label>
+            <select id="payment" name="payment">
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">Mastercard</option>
+                <option value="giftcard">Vigiftcardsa</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <p>select the subscriptions:</p>
+            <label>
+                <input type="checkbox" name="subscriptions[]" value="subscribe">
+                Subscribe
+              </label>
+            
+              <label>
+                <input type="checkbox" name="subscriptions[]" value="newsletter">
+                Newsletter
+              </label>
+            
+              <label>
+                <input type="checkbox" name="subscriptions[]" value="offers">
+                Special Offers
+              </label>
+        </div>
+        <br>
+        <div>
+            <input type="reset" />
+        </div>
+        <br />
+
+        <div>
+            <input type="submit" />
+        </div>
+        <br />
+    </form>
+</body>
+
+</html>

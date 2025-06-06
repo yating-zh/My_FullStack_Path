@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    svg{
+        fill: var(--svg-clr);
+        width: 2rem;
+        height:2rem
+    }
+}
+:root{
+    --heading-clr:#002765;
+    --text-clr:#dfdfdf;
+    --svg-clr:rgb(255, 94, 0);
+    --button-hov-clr:rgb(255, 118, 39);
+
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: linear-gradient(135deg,#153677,#4e085f);
+    padding:10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 50rem;
+    background-color: white;
+    margin: 8rem auto 1.5rem;
+    padding:2rem 2rem 5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
+
+}
+.todo-app h2{
+    color:var(--heading-clr);
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    font-size: 2rem;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--text-clr);
+    border-radius: 30px;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 1px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 1rem 3rem;
+    background: var(--svg-clr);
+    color: var(--text-clr);
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1rem;
+}
+button:hover{
+    background-color: var(--button-hov-clr);
+}
+
+ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 1rem 1rem 1rem 4rem;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position:absolute;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-image: url(images/circle_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top:1rem;
+    left:1rem;
+}
+ul li.checked{
+    color:#777;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+
+    background-image: url(images/check_circle_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.svg);
+
+}
+ul li span{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    /*background-color: #ccc;*/
+    text-align: center;
+
+}
+ul li span:hover{
+    background-color: #aaa;
+}
+ul li:hover{
+    background-color: #eee;
+    border-radius: 1rem;
+}

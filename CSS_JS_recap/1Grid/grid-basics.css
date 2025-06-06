@@ -1,0 +1,88 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    text-align: center;
+}
+.item{
+      background-color:sandybrown;
+      outline: solid 1px skyblue;
+      font-size: 50px;
+      border-radius: 10px;
+}
+h1 span{
+    font-size:medium;
+}
+#container{
+    width: 95vw;
+    height: 60vh;
+    outline:slateblue solid 5px;
+    background-color: whitesmoke;
+    margin: 0 auto;
+
+    display: grid ;
+    /*grid-template-columns:1fr 2fr 1fr ;*/
+    grid-template-columns:repeat(3,1fr) ;
+    /*grid-template-columns:repeat(auto-fill,300px) ;*/
+    /*grid-template-columns:1fr minmax(500px,1fr);*/
+        /*当空余space到达300px，自动填充一个新的column: */
+    /*grid-template-columns:repeat(auto-fill,minmax(300px,1fr)) ;*/
+        /*当空余space到达300px，拉伸现有column: */
+    /*grid-template-columns:repeat(auto-fit,minmax(300px,1fr)) ;*/
+        /* 命名column lines */
+    /*grid-template-columns:[col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];*/
+    grid-template-rows: 100px 50px;
+
+    /* shorthand expression of grid     grid: row/column*/
+    grid: 100px 50px/ repeat(3,1fr);
+
+    grid-auto-rows: 100px;
+    /*grid-auto-columns: 200;*/
+    grid-auto-flow:row; 
+
+    /* auto-flow with fixed row height and repeat same setting each single row */
+    grid: auto-flow 100px/repeat(3,1fr);
+
+    /*column-gap: 10px;
+    row-gap: 10px;
+    gap: 20px;*/
+    gap:2px 2px;
+
+    /* 调整cells内的items */
+    /*align-items: center;
+    justify-items:start;*/
+    place-items: stretch;
+   
+    /* 调整cells本身在网格中的排布 */
+    /*align-content: center;*/
+    /*align-content: baseline;
+    align-content: start;*/
+    /*justify-content: space-evenly;*/
+    /*justify-content: end;*/
+    place-content: start space-evenly;
+
+}
+/*.seven{
+    grid-column:2/3;
+}*/
+
+.one{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /*grid-column-end: -1;
+    grid-column-end:span 3;*/
+    grid-column: 1/4; /* col-start / col-end*/
+}
+.two{
+    grid-row-start:2 ;
+    grid-row-end: 5;
+    grid-row: 2/5; /* row-start / row-end*/
+    grid-area: 2/1/5/2;  /* row-start/ col-start/ row-end /col-end*/
+
+}
+.five{
+    /*align-self:center ;
+    justify-self: start;*/
+    place-self: center start;
+    /*place-self: center;*/
+
+}

@@ -1,0 +1,130 @@
+:root{
+    --accent-clr:#8672ff;
+    --base-clr:white;
+    --text-clr:#2e2b41;
+    --input-clr:#f3f0ff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Poppins,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-clr);
+    text-align: center;
+}
+body{
+    min-height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+.wrapper{
+    background-color: var(--base-clr);
+    height: 100vh;
+    width: max(40%,600px);
+    padding: 1rem;
+    border-radius: 0 2rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper h1{
+    font-weight: 900;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+form{
+    width:min(350px,100%);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+form>div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form label{
+    flex-shrink: 0; /*does not shrink*/
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--accent-clr);
+    border-radius: 1rem 0 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form label svg{
+    fill: var(--base-clr);
+}
+div:has(input:focus)>label{
+    background-color: var(--text-clr);
+}
+
+
+form input{
+    flex-grow: 1;
+    min-width: 0;
+    height: 3rem;
+    padding: 1rem;
+    font: inherit;
+    border-radius: 0 1rem 1rem 0;
+    border: 2px solid var(--input-clr);   
+    border-left: none;
+    background-color: var(--input-clr);
+    transition: 150ms ease;
+}
+form input:hover{
+    border-color: var(--accent-clr);
+}
+form input:focus{
+    outline: none;
+    border-color: var(--text-clr);
+}
+form button{
+    margin-top: 1rem;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 4rem;
+    color: var(--base-clr);
+    background-color: var(--accent-clr);
+    cursor: pointer;
+    transition: 150ms ease;
+}
+form button:hover{
+    background-color: var(--text-clr);
+}
+form button:focus{
+    outline: none;
+    background-color: var(--text-clr);
+}
+a{
+    text-decoration: none;
+    color: var(--accent-clr);
+}
+a:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:60rem){
+    .wrapper{
+        width: min(100%,50rem);
+        border-radius: 0;
+    }
+}
+form div.incorrect label{
+     background-color: #f06272;
+}
+form div.incorrect input{
+    border-color:  #f06272;
+}
+#error-messages{
+    color: #f06272;
+}
+

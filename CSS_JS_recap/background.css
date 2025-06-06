@@ -1,0 +1,22 @@
+body{
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    /*background-size: contain;*/
+    /*background-size: auto;*/
+    /*background-size:50%;*/
+}
+h1{
+    /*background-color: aqua;*/
+    background:linear-gradient(to right,skyblue,white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+p{
+    /*background-color: aqua;*/
+    background:linear-gradient(to left,skyblue,white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

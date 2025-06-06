@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#efefff,#cccbff);
+}
+.wrapper{
+    max-width: 80vw;
+    max-width: 80dvw;
+    margin: 5rem;
+    overflow: hidden;
+}
+
+.wrapper .card{
+    /*width: 20rem;*/
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+.wrapper .card:hover{
+    transform: translateY(-10px);
+}
+.card .card-image {
+    position: relative;
+}
+.card .card-image img{
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    aspect-ratio: 16/9;
+    object-fit:cover;
+}
+.card .card-image .card-tag{
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    color: #6366f1;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.card .card-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem 1.5rem;
+}
+.card .card-content .card-title{
+    color: #111;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+.card .card-content .card-text{
+    color: #747474;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+.card .card-content .card-footer{
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: auto;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+.card .card-footer .card-profile{
+    display: flex;
+    align-items: center;
+}
+.card .card-profile .card-profile-info{
+    display: flex;
+    flex-direction: column;
+}
+.card .card-profile .card-profile-name{
+    font-size: 0.85rem;
+    font-weight: 600;
+    color:#202020
+}
+.card .card-profile .card-profile-role{
+    font-size: 0.8rem;
+    color:#7a7a7a;
+}
+
+.card .card-profile img{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right:1rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+.card .card-footer .card-button{
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 3rem ;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+    text-decoration: none;
+    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.2);
+    transition: all 0.2s ease;
+}
+.card .card-footer .card-button:hover{
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 15px rgba(99, 102, 241, 0.4);
+}
+
+.wrapper .swiper-pagination-bullet{
+    height: 1rem;
+    width: 1rem;
+    overflow: hidden;
+    opacity: 1;
+    background: #b1b3f8;
+}
+.wrapper .swiper-button-prev, 
+.wrapper .swiper-button-next{
+    color: #6366f1;
+    margin-top: -2rem;
+    transition: all 0.2s ease;
+}
+.wrapper .swiper-button-prev:hover, 
+.wrapper .swiper-button-next:hover{
+    color: #8b5cf6;
+}
+
+@media(max-width:40rem){
+    .wrapper .swiper-button-prev, 
+    .wrapper .swiper-button-next{
+        display: none;
+    }
+}

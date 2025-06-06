@@ -1,0 +1,103 @@
+:root{
+    --base-clr:rgb(14, 14, 14);
+    --hovor-clr:rgb(47, 42, 119);
+    --font-clr:rgb(230, 230, 230);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 1rem;
+    font-family:Poppins,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+/*body{
+    background-color:none;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}*/
+nav{
+    height: 5rem;
+    background-color: var(--base-clr);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav a{
+    height: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--font-clr);
+}
+nav a:hover{
+    background-color: var(--hovor-clr);
+}
+nav .home-link{
+    margin-right: auto;
+}
+
+nav svg{
+    fill: var(--font-clr);
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    padding: 0 2rem;
+    display: none;
+}
+
+@media(max-width:40rem){
+    .links-container{
+        /*display: none;*/
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width:20rem;
+
+        background-color: var(--base-clr);
+        box-shadow: -0.3rem 0 0.3rem rgba(0,0,0,0.25);
+        transition: 0.75s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 1rem 2rem;
+        justify-content: flex-start;
+    }
+
+    .open-sidebar-button, .close-sidebar-button{
+        padding: 2rem;
+        display: block;
+    }
+    #sidebar-active:checked ~ .links-container{
+        /*display: flex;*/
+        right: 0;
+
+    }
+    #sidebar-active:checked ~ #overlay{
+        /*background-color: red;*/
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;/*less than the z-index of the sidebar*/
+    }
+}
+
