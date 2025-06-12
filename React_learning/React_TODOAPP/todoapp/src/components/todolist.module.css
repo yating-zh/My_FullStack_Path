@@ -1,0 +1,10 @@
+.todoList {
+  /*background-color: #ddd;*/
+  width: 50rem;
+  margin: 0 auto;
+  /*box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);*/
+  margin-top: 3rem;
+  font-size: 1rem;
+  /*padding: 0.5rem;
+  padding-left: 2rem;*/
+}

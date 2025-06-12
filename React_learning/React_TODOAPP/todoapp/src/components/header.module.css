@@ -1,0 +1,9 @@
+.header {
+  color: rgb(218, 120, 0);
+  height: 8rem;
+  font-size: 4rem;
+  text-align: center;
+  background-color: rgb(255, 245, 190);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  align-content: center;
+}
