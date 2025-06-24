@@ -1,0 +1,30 @@
+.foodContainer {
+  /*background-color: aqua;*/
+  width: 30rem;
+  /*margin: 2rem;*/
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.foodContainer img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.foodContent {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foodContent button {
+  border-radius: 4px;
+  width: 7rem;
+  height: 2rem;
+  background-color: salmon;
+  color: white;
+  border: none;
+}
+.foodContent button:hover {
+  background-color: rgb(232, 81, 64);
+}

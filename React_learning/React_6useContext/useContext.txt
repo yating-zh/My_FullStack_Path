@@ -1,0 +1,22 @@
+-----useContext
+让在一个component中创建的Data和Function，不需要通过传递给层层嵌套的其他component，就可以直接被其他component使用
+1. creating context
+export const userInfoContext = createContext(); //1. creating context
+
+2. providing context
+<userInfoContext.Provider value={{ username, setUsername }}>
+
+3. consuming context/use context
+const { username, setUsername } = useContext(userInfoContext);
+
+4. update context
+setUsername(value);
+
+
+-----比较useState, useReducer, useContext
+- useState is used to update values dynamically within a component.
+- useReducer is used for more complex state logic, allowing updates through custom reducer functions.
+- useContext is used to share state and functions across multiple components without prop drilling.
+
+
+-----Can use useContext+useState, or useContext+useReducer to update the context

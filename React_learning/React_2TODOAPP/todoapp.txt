@@ -1,0 +1,3 @@
+-----useState
+const [value,SetValue]=useState("")
+用来动态更改参数

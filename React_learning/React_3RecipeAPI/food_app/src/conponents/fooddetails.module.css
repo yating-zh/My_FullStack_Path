@@ -1,0 +1,50 @@
+.foodCard {
+  padding-top: 2rem;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  padding-bottom: 5rem;
+}
+.foodTitle h1 {
+  margin: 2rem;
+  /*padding-top: 2rem;*/
+}
+.foodTitle img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+.foodTags {
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2rem;
+  align-items: center;
+}
+.foodTag {
+  flex: 1;
+}
+.price {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 2rem;
+  color: salmon;
+}
+.foodInstruction {
+  margin-left: 2rem;
+}
+.foodInstruction h2 {
+  margin-bottom: 1rem;
+}
+.foodInstruction ol {
+  margin-left: 2rem;
+}
+.foodInstruction li {
+  margin: 1rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+.foodInstruction p {
+  color: #666;
+  font-size: 1.1rem;
+}

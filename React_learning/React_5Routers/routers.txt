@@ -1,0 +1,39 @@
+<BrowserRouter>
+  <Nav />
+  <Routes>
+    <Route path="/" element={<Homepage />} />
+    <Route path="/products" element={<Products />}>
+      <Route path=":id" element={<ProductDetail />} />
+    </Route>
+    <Route path="/dashboard" element={<Dashboard />}>
+      <Route path="settings" element={<Settings />} />
+      <Route path="profile" element={<Profile />} />
+    </Route>
+    <Route path="*" element={<PageNotFound />} />
+  </Routes>
+</BrowserRouter>
+
+
+-----useParams
+const {id}=useParams(); 
+用来读取<route>的url中预留的参数比如
+<Route path="/products/:id" element={<Products />} /> 里面的:id
+http://localhost:5173/products/25
+useParams()则读取了url中的id=25
+
+
+-----useNavigate
+const navigate=useNavigate();
+function handleClick(){
+    navigate("/dashboard/profile");
+}
+
+
+-----useNavigate + useLocation
+const navigate = useNavigate();
+navigate("/dashboard/profile", { state: { user, age } });
+***
+const location=useLocation();
+const { user, age } = location.state || {};
+
+

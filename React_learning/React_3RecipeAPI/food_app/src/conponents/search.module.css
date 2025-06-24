@@ -1,0 +1,27 @@
+.search {
+  height: 5rem;
+  /*margin-top: 1rem;
+  margin-bottom: 1rem;*/
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search input {
+  height: 3rem;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-bottom-color: #ccc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  width: 40rem;
+}
+.search input:focus {
+  border-bottom-color: salmon;
+  color: salmon;
+}
+.search input:hover {
+  border-bottom-color: salmon;
+}

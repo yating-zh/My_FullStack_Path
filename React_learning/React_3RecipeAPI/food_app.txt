@@ -1,0 +1,8 @@
+-----useState
+const [value,SetValue]=useState("")
+用来动态更改参数
+
+
+-----useEffect
+useEffect=(()=>{},[])
+用来触发function的运行（每当参数改变，都运行一次相应的function），使用例子：API fetch data

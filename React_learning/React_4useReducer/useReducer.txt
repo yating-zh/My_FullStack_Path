@@ -1,0 +1,8 @@
+-----useReducer
+const [state, dispatch] = useReducer(reducer, { balance: 0 });
+function reducer(state, action) {}
+
+设定reducer function，根据dispatch的不同的actions，对state做不同的更改，return相应的state。
+dispatch是object of actions.例子中{ balance: 0 }是initial state。
+useReducer可以看做是升级版的useState
+

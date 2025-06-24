@@ -1,0 +1,9 @@
+-----custom Hooks
+1. create hooks (in .js)
+export default function useDisplayMessage() {
+  function displayMessage() {}
+}
+
+2. call hooks
+const [message, displayMessage] = useDisplayMessage("");
+
