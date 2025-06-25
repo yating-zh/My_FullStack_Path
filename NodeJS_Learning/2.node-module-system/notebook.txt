@@ -1,0 +1,27 @@
+-----what is node module system
+node module system allows you to organise code into multiple reusable pieces of modules. 
+each file in nodejs will be treated as a seperate module
+
+
+-----import & export
+1. export:
+module.exports = { add, subtract, divide };
+    //or ES Modules style:
+    export default { add, subtract, divide };
+
+2.import
+const firstModule = require("./first-module");
+    or ES Modules style:
+    import firstModule from "./first-module.js";
+
+
+-----throw error
+throw new Error("invilid input/error message");
+console.log("error:", error.message);
+
+
+-----module wrapper
+(function(exports, require, module, __filename, __dirname) {
+  // the file's actual code
+})();
+This is the internal code in Node.js, what we can see and use is export/require modules.

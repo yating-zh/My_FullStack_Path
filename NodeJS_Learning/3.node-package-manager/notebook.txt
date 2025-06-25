@@ -1,0 +1,29 @@
+----- initialisation of package.json file
+>npm init
+>(enter the info about the nodejs project)
+>OK
+(done.)
+
+
+----- install dependencies
+>npm install (+nameOfDependencies eg:npm install lodash)
+
+
+----- uninstall dependencies
+>npm uninstall (+nameOfDependencies eg:npm uninstall lodash)
+
+
+----- update packages
+>npm update
+
+
+----- run scripts
+>npm (+scriptName eg:npm start, run a script named "start" which can be set in package.json)
+
+
+
+----- dependencies VS dev dependencies in package.json
+Dependencies: all dependencies reuired to run the app in production
+Dev dependencies: the dependencies need for local development and test
+
+
