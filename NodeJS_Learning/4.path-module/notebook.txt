@@ -1,0 +1,9 @@
+Understand of
+    __filename
+    __dirname
+    path.dirname()
+    path.basename()
+    path.extname()
+    path.join()
+    path.resolve()
+    path.normalize()
