@@ -1,0 +1,72 @@
+.cover {
+  display: flex;
+  /*width: inherit;*/
+  gap: 1rem;
+  /*background-color: red;*/
+  margin: 0 1rem;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2rem;
+}
+.cover .coverText {
+  flex: 3;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 40rem) {
+  .cover {
+    flex-direction: column;
+  }
+}
+.coverText p .uppercase {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--hover-clr);
+  letter-spacing: 2px;
+}
+.coverText h1.slogan {
+  line-height: 1;
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+}
+.coverText span.focus_text {
+  color: var(--focus-clr);
+}
+.coverText p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+.coverText button {
+  color: white;
+  background-color: var(--focus-clr);
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.coverText button:hover {
+  color: var(--focus-clr);
+  background-color: white;
+}
+
+.cover .coverImg {
+  flex: 2;
+  width: inherit;
+}
+
+.description {
+  margin: 10rem auto;
+  width: 1000px;
+  width: 1000px;
+  text-align: center;
+}
+.description h2 {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+.descriptionText {
+  margin-top: 2rem;
+}
+.descriptionText p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}

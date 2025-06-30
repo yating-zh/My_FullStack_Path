@@ -1,0 +1,64 @@
+.features {
+  margin: 0 5rem;
+
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featureTitle {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.upperCase {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--hover-clr);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.fcards {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fcard {
+  flex: 1 1 20rem;
+  /*box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);*/
+  border-radius: 0.7rem;
+  padding: 1rem;
+  /*max-width: 40rem;*/
+  background-color: rgb(232, 240, 254);
+}
+.fcard img {
+  width: 3rem;
+  margin: 1rem;
+}
+.fcardTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.fcardDescription {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 40rem) {
+  .fcards {
+    flex-direction: column;
+  }
+}
+.aboutUs {
+  margin-top: 5rem;
+  text-align: center;
+  width: 1000px;
+  width: 1000px;
+}
+.aboutUs p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}

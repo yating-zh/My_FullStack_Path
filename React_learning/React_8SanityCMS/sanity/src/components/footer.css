@@ -1,0 +1,8 @@
+.footer {
+  margin-top: 8rem;
+  height: 15rem;
+  background-color: var(--hover-clr);
+  color: white;
+  text-align: center;
+  align-content: center;
+}

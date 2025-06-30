@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+html {
+  background: radial-gradient(
+      circle at 5% 20%,
+      rgb(224, 229, 239) 1%,
+      transparent 20%
+    ),
+    radial-gradient(circle at 95% 5%, rgb(224, 229, 239) 2%, transparent 15%),
+    radial-gradient(circle at 95% 50%, rgb(224, 229, 239) 1%, transparent 15%),
+    radial-gradient(circle at 5% 90%, rgb(224, 229, 239) 2%, transparent 15%),
+    rgb(251, 251, 251);
+}
+/*body {
+  max-width: 1560px;
+  margin: 0 auto;
+}*/
+#home,
+#product,
+#feature {
+  scroll-margin-top: 5rem;
+}

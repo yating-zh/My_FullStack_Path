@@ -1,0 +1,118 @@
+:root {
+  --base-clr: rgb(251, 251, 251);
+  --text-clr: rgb(1, 33, 92);
+  --hover-clr: rgb(52, 77, 125);
+  --focus-clr: rgb(0, 72, 233);
+  --title-clr: rgb(54, 54, 54);
+}
+
+.nav {
+  height: 5rem;
+  background-color: var(--base-clr);
+  /*display: flex;*/
+  /*justify-content: flex-end;*/
+  /*align-items: center;*/
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  position: sticky;
+  top: 0;
+}
+.links-container {
+  height: 100%;
+  /*width: 100%;*/
+  margin: 0 auto;
+  max-width: 1560px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav a {
+  height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+  width: 7rem;
+  font-size: 1.2rem;
+}
+.nav a:hover {
+  /*font-weight: 600;*/
+  color: var(--hover-clr);
+}
+.nav .home-link {
+  margin-right: auto;
+  font-weight: 600;
+  color: var(--focus-clr);
+  padding: 0.9rem;
+}
+.nav .home-link:hover {
+  color: var(--focus-clr);
+}
+.nav .home-link img {
+  height: inherit;
+}
+
+.nav .login-link {
+  margin-left: auto;
+}
+.nav .login-link:hover {
+  color: var(--focus-clr);
+}
+
+.nav svg {
+  fill: var(--focus-clr);
+}
+#sidebar-active {
+  display: none;
+}
+.open-sidebar-button,
+.close-sidebar-button {
+  padding: 0 2rem;
+  display: none;
+}
+
+@media (max-width: 40rem) {
+  .links-container {
+    /*display: none;*/
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 20rem;
+
+    background-color: var(--base-clr);
+    box-shadow: -0.3rem 0 0.3rem rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+  .nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 1rem 2rem;
+    justify-content: flex-start;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 2rem;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container {
+    /*display: flex;*/
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay {
+    /*background-color: red;*/
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9; /*less than the z-index of the sidebar*/
+  }
+}
